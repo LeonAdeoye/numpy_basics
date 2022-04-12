@@ -13,9 +13,42 @@ def slicing():
     print(arr[:5])
     # Creates a 2-D array containing two arrays with the values [1,2,3] and [4,5,6]
     arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
-    print(arr_2d)
+    print(f'np.array([[1, 2, 3], [4, 5, 6]]:\n{arr_2d}')
     print(arr_2d.ndim)
     print(arr_2d[0])
+
+
+def create_array():
+    # Creates a 2-D array containing two arrays with the values [1,2,3] and [4,5,6]
+    arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
+    print(f'np.array([[1, 2, 3], [4, 5, 6]]:\n{arr_2d}')
+    print(arr_2d.ndim)
+    print(arr_2d[0])
+    zeroes = np.zeros((2, 2, 2))
+    print(zeroes)
+    sevens = np.full((2, 2, 2), 7)
+    print(sevens)
+    ones = np.ones((2, 2, 2))
+    print(ones)
+
+
+def calculations_array():
+    list1 = np.random.rand(10)
+    list2 = np.random.rand(10)
+    print(list1)
+    add = np.add(list1, list2)
+    print(add)
+    sub = np.subtract(list1, list2)
+    print(sub)
+    div = np.divide(list1, list2)
+    print(div)
+    mult = np.multiply(list1, list2)
+    print(mult)
+    dot = np.dot(list1, list2)
+    print(dot)
+
+
+
 
 
 def view_vs_copy():
@@ -51,6 +84,8 @@ def view_vs_copy():
 
 if __name__ == '__main__':
     slicing()
-    view_vs_copy();
+    view_vs_copy()
+    create_array()
+    calculations_array()
 
 
