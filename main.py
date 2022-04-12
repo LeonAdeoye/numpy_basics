@@ -30,6 +30,8 @@ def create_array():
     print(sevens)
     ones = np.ones((2, 2, 2))
     print(ones)
+    np.delete(arr_2d, 1, axis=0)
+    print(f'After delete: np.delete(arr_2d, 0, axis=1) => {arr_2d}')
 
 
 def calculations_array():
@@ -46,9 +48,9 @@ def calculations_array():
     print(mult)
     dot = np.dot(list1, list2)
     print(dot)
-
-
-
+    add[0] = 100
+    add = np.append(add, [0.999, 0.888])
+    print(f'add: {add}')
 
 
 def view_vs_copy():
@@ -82,10 +84,17 @@ def view_vs_copy():
     print(np.sort(arr))
 
 
+def save_and_load():
+    arr2 = np.array([1, 2, 3, 4, 5])
+    np.save("saved_array", arr2)
+    test = np.load("saved_array.npy")
+
+
 if __name__ == '__main__':
     slicing()
     view_vs_copy()
     create_array()
     calculations_array()
+    save_and_load()
 
 
